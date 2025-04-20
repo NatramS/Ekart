@@ -1,7 +1,7 @@
 package com.reljicd.model;
 
 import org.hibernate.validator.constraints.Length;
-
+import javax.validation.constraints.*;
 import javax.persistence.*;
 import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.Min;
