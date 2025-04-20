@@ -85,12 +85,16 @@ public class ShoppingCartServiceImpl implements ShoppingCartService {
         Product product;
         for (Map.Entry<Product, Integer> entry : products.entrySet()) {
             // Refresh quantity for every product before checking
-            product = productRepository.findOne(entry.getKey().getId());
+            product = productRepository.findById(entry.getKey().getId())
+                .orElseThrow(() -> new NotEnoughProductsInStockException(entry.getKey()));
+
             if (product.getQuantity() < entry.getValue())
                 throw new NotEnoughProductsInStockException(product);
+
             entry.getKey().setQuantity(product.getQuantity() - entry.getValue());
         }
-        productRepository.save(products.keySet());
+        // Save all products after checkout
+        productRepository.saveAll(products.keySet());
         productRepository.flush();
         products.clear();
     }
