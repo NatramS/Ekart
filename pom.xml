@@ -85,6 +85,7 @@
             <scope>runtime</scope>
         </dependency>
         <dependency>
+         <!-- JAXB API -->
     <groupId>javax.xml.bind</groupId>
     <artifactId>jaxb-api</artifactId>
     <version>2.3.1</version>
@@ -99,7 +100,18 @@
     <artifactId>jaxb-runtime</artifactId>
     <version>2.3.3</version>
 </dependency>
-
+<!-- JAXB Runtime -->
+<dependency>
+    <groupId>org.glassfish.jaxb</groupId>
+    <artifactId>jaxb-runtime</artifactId>
+    <version>2.3.3</version>
+</dependency>
+<!-- Java Activation Framework (needed for JAXB in Java 9+) -->
+<dependency>
+    <groupId>com.sun.activation</groupId>
+    <artifactId>javax.activation</artifactId>
+    <version>1.2.0</version>
+</dependency>
         <!-- MySQL -->
         <dependency>
             <groupId>mysql</groupId>
