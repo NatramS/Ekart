@@ -1,5 +1,6 @@
 package com.reljicd.controller;
 
+import org.springframework.data.domain.Sort;
 import com.reljicd.model.Product;
 import com.reljicd.service.ProductService;
 import com.reljicd.util.Pager;
