@@ -1,5 +1,5 @@
 package com.reljicd.model;
-import javax.validation.constraints.*;
+
 import javax.persistence.*;
 import java.util.Collection;
 
