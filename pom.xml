@@ -228,12 +228,12 @@
         <repository>
             <id>maven-releases</id>
             <name>maven-releases</name>
-            <url>http://ec2-18-208-157-120.compute-1.amazonaws.com:8081/repository/maven-releases/</url>
+            <url>http://ec2-54-91-53-232.compute-1.amazonaws.com:8081/repository/maven-releases/</url>
         </repository>
         <snapshotRepository>
             <id>maven-snapshots</id>
             <name>maven-snapshots</name>
-            <url>http://ec2-18-208-157-120.compute-1.amazonaws.com:8081/repository/maven-snapshots/</url>
+            <url>http://ec2-54-91-53-232.compute-1.amazonaws.com:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 
